@@ -17,6 +17,8 @@
 */
 import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
+import Profiles from "views/Profile/Profiles.js";
+import ProfilesNew from "views/Profile/ProfileNew.js"
 import Maps from "views/examples/Maps.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
@@ -32,15 +34,29 @@ var routes = [
     layout: "/admin",
   },
   {
+    path: "/perfis",
+    name: "Perfis",
+    icon: "ni ni-single-02 text-yellow",
+    component: <Profiles />,
+    layout: "/admin",
+  },
+  {
+    path: "/perfis/novo",
+    name: "Perfis",
+    icon: "ni ni-single-02 text-yellow",
+    component: <ProfilesNew />,
+    layout: "/admin",
+  },
+  {
     path: "/icons",
-    name: "Icons",
+    name: "Aplições",
     icon: "ni ni-planet text-blue",
     component: <Icons />,
     layout: "/admin",
   },
   {
     path: "/maps",
-    name: "Maps",
+    name: "Grupo de Permissões",
     icon: "ni ni-pin-3 text-orange",
     component: <Maps />,
     layout: "/admin",

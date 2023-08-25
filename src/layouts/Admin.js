@@ -23,6 +23,7 @@ import { Container } from "reactstrap";
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
+import GlobalContextProvider from "context/global.context";
 
 import routes from "routes.js";
 
@@ -61,7 +62,7 @@ const Admin = (props) => {
   };
 
   return (
-    <>
+    <GlobalContextProvider>
       <Sidebar
         {...props}
         routes={routes}
@@ -84,7 +85,7 @@ const Admin = (props) => {
           <AdminFooter />
         </Container>
       </div>
-    </>
+    </GlobalContextProvider>
   );
 };
 
